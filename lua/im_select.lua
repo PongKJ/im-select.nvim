@@ -29,7 +29,7 @@ local function is_supported()
     -- other frameworks are not support yet, PR welcome
     local ims = { "fcitx5-remote", "fcitx-remote", "ibus" }
     for _, im in ipairs(ims) do
-        if vim.fn.executable(im) then
+        if vim.fn.executable(im) == 1 then
             return true
         end
     end
